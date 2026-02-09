@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 @import "tailwindcss";
 
 body {
@@ -12,5 +12,44 @@ body {
 
   .flex-center {
     @apply flex items-center justify-center;
+  }
+}
+
+.replying_indicator {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  height: 20px;
+}
+
+.replying_indicator span {
+  width: 6px;
+  height: 6px;
+  background-color: #555;
+  border-radius: 50%;
+  display: inline-block;
+  animation: wave 1s infinite;
+}
+
+/* Stagger each dot */
+.replying_indicator span:nth-child(1) {
+  animation-delay: 0s;
+}
+.replying_indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.replying_indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes wave {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(-6px);
   }
 }
