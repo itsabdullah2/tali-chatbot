@@ -17,11 +17,11 @@ const ChatbotFooter = () => {
       const data = await postPrompt(debouncedValue);
 
       console.log(data);
-      setPromptValue("");
     } catch (err) {
       console.error("Failed to send prompt");
     } finally {
       setIsLoading(false);
+      setPromptValue("");
     }
 
     console.log(debouncedValue);
