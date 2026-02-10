@@ -1,25 +1,19 @@
-const AgentMessages = ({ messages = [] }) => {
+const AgentMessages = ({ messages }) => {
   if (!messages.length) {
     return null;
   }
 
   return (
     <div className="self-start flex flex-col gap-2">
-      {messages.map((mes, idx) => (
+      {messages.map((mes) => (
         <div
-          key={idx}
+          key={mes.id}
           className="flex flex-col bg-gray-200 max-w-80 w-fit px-3 py-2 rounded-md"
         >
-          <p>{mes}</p>
+          <p>{mes.content}</p>
           {/* <span>{mes.created_at}</span> */}
         </div>
       ))}
-      {/* <div className="flex flex-col bg-gray-200 max-w-80 w-fit px-3 py-2 rounded-md">
-        <p className="text-[17px] text-gray-700 font-medium">
-          Welcome Back Abdullah!
-        </p>
-        <span className="text-gray-400 text-sm self-start">07:30</span>
-      </div> */}
     </div>
   );
 };
