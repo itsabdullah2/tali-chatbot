@@ -85,7 +85,7 @@ const ChatbotFooter = () => {
         id="talk-to-agent"
         name="talk-to-agent"
         placeholder="Ask anything"
-        className="flex-1 px-3 py-3 rounded-full bg-sky-100 focus:outline-none focus:placeholder:opacity-0 placeholder:duration-200 caret-sky-600"
+        className="flex-1 px-3 py-3 rounded-full bg-sky-100 focus:outline-none caret-sky-600"
         value={promptValue}
         onChange={handlePromptChange}
         autoComplete="off"
