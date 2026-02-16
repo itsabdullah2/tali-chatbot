@@ -21,10 +21,9 @@ const ChatbotBody = () => {
     [messages],
   );
   return (
-    <div className="flex-1 px-7 bg-gray-100 overflow-auto rounded-lg py-2 mb-4">
+    <div className="flex-1 px-7 bg-sky-100 overflow-auto rounded-lg py-2 mb-4">
       <div className="flex flex-col gap-4">
         <MessagesByRole messages={sortedMessages} role="user" />
-        {/* <MessagesByRole messages={sortedMessages} role="assistant" /> */}
       </div>
 
       <div ref={bottomRef} />
